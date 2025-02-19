@@ -19,35 +19,22 @@
         img {
             position: absolute;
             object-fit: contain;
-            display: none; /* Oculta todas as imagens por padrão */
         }
     </style>
 </head>
 <body>
-    <!-- Lista de imagens -->
-    <img id="base-menu" src="base-menu.png" alt="Base Menu">
-    <img id="box-options" src="box-options.png" alt="Box Options">
-    <img id="pistol" src="Pistol.png" alt="Pistol">
-    <img id="player" src="Player.png" alt="Player">
+    
+    <img id="baseMenu" src="base-menu.png" alt="Base Menu">
+    <img id="boxOptions" src="box-options.png" alt="Box Options">
+    <img id="boxOptions" src="Pistol.png" alt="Box Options">
+    <img id="boxOptions" src="Player.png" alt="Box Options">
 
+    
     <script>
-        // Obter o parâmetro 'image' da URL
         const urlParams = new URLSearchParams(window.location.search);
         const imageName = urlParams.get('image');
-
-        // Verificar se o parâmetro 'image' foi fornecido
         if (imageName) {
-            // Selecionar a imagem correspondente ao parâmetro 'image'
-            const imageElement = document.getElementById(imageName);
-
-            // Exibir apenas a imagem correspondente
-            if (imageElement) {
-                imageElement.style.display = 'block';
-            } else {
-                console.error(`Imagem com ID '${imageName}' não encontrada.`);
-            }
-        } else {
-            console.error("Parâmetro 'image' não fornecido na URL.");
+            document.getElementById(imageName).style.display = 'block';
         }
     </script>
 </body>
