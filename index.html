@@ -12,15 +12,28 @@
             height: 100%;
             overflow: hidden;
             background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         img {
-            width: 100%;
-            height: 100%;
+            position: absolute;
             object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <img src="base-menu.png" alt="Menu">
+    
+    <img id="baseMenu" src="base-menu.png" alt="Base Menu">
+    <img id="boxOptions" src="box-options.png" alt="Box Options">
+
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageName = urlParams.get('image');
+        if (imageName) {
+            document.getElementById(imageName).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
