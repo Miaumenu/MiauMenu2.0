@@ -1,4 +1,0 @@
-<iframe id="menuFrame" src="about:blank"></iframe>
-<script>
-document.getElementById('menuFrame').contentWindow.document.write(htmlContent);
-</script>
